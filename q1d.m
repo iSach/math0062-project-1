@@ -4,13 +4,14 @@ function [hands_prob, expectation, variance] = q1d()
 % que l'espérance et la variance.
 %
 % Sortie :
-%       hands_prob : Vecteur colonne contenant les probabilités de chaque
-%                    main en partant de la couleur jusqu'à la paire simple.
+%       hands_prob : Vecteur colonne contenant les probabilités de
+%                    chaque main en partant de la couleur jusqu'à la
+%                    paire simple.
 %       expectation: Espérance.
 %       variance   : La variance.
 %
 
-% On génère notre urne, avec 5x (R)ouge, 5x (B)leu, 5x (V)ert, 5x (N)oir.
+% On génère notre urne avec 5x (R)ouge, 5x (B)leu, 5x (V)ert, 5x (N)oir
 balls_in_urn = gen_urn('RBVN', 5);
 % Le joueur tire 5 balles.
 nb_draws = 5;
