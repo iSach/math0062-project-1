@@ -56,27 +56,29 @@ function [hands_prob, time, expectation, variance] = q1e(colors_nbr)
 
         % Trie par ordre décroissant pour identifier le nombre le + grand.
         color_count = sort(color_count, 'descend');
+       % disp(' ');
+       % disp(tree(curr, :));
 
         % Comparaison et identification de chaque cas.
         switch color_count(1)
             case 5 % Couleur
-                counter(1) = counter(1) + 1;
+                counter(1) = counter(1) + 1; 
             case 4 % Carré
                 counter(2) = counter(2) + 1;
             case 3 % Full ou Brelan
                 if color_count(2) == 2 % 3 et 2 -> Full
                     counter(3) = counter(3) + 1;
                 else
-                    counter(4) = counter(4) + 1;
+                    counter(4) = counter(4) + 1; % Brelan
                 end
             case 2
                 if color_count(2) == 2 % 2 et 2 -> Double Paire
                     counter(5) = counter(5) + 1;
                 else
-                   counter(6) = counter(6) + 1;
+                   counter(6) = counter(6) + 1; % Paire simple
                 end
             case 1
-                counter(7) = counter(7) + 1;
+                counter(7) = counter(7) + 1; % Famille
         end
     end
 

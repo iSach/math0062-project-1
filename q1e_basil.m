@@ -7,7 +7,7 @@ tic
 %tout le code à chaque fois, on va partir de tab_colors pour générer notre
 %tree. On ne devra modifier que tab_colors pour ajouter ou retirer des
 %couleurs.
-tab_colors = ['R' 'B' 'V' 'N' 'D' 'A' 'Z' 'E' 'R'];
+tab_colors = ['R' 'B' 'V' 'N' 'D' 'A' 'Z' 'E' 'F'];
 taille_colors = length(tab_colors);
 balls_in_urn = zeros(1, 5*taille_colors);
 
@@ -140,12 +140,12 @@ end
 
 %On peut maintenant calculer les probabilités de chaque main
 p_simple_paire = nb_simple_paire /taille;
-p_double_paire = nb_double_paire /taille;
-p_famille = nb_famille /taille;
-p_brelan = nb_brelan /taille;
-p_full = nb_full /taille;
-p_carre = nb_carre /taille;
-p_couleur = nb_couleur /taille;
+p_double_paire = nb_double_paire / taille;
+p_famille = nb_famille / taille;
+p_brelan = nb_brelan / taille;
+p_full = nb_full / taille;
+p_carre = nb_carre / taille;
+p_couleur = nb_couleur / taille;
 
 %et l'espérance du gain X
 esperance = p_simple_paire*0 + p_double_paire*0.75 + p_famille*0.8 + p_brelan*2 + p_full*4.5 + p_carre*7 + p_couleur*10;
@@ -154,19 +154,3 @@ esperance = p_simple_paire*0 + p_double_paire*0.75 + p_famille*0.8 + p_brelan*2 
 variance = p_simple_paire*0*0 + p_double_paire*0.75*0.75 + p_famille*0.8*0.8 + p_brelan*2*2 + p_full*4.5*4.5 + p_carre*7*7 + p_couleur*10*10 - esperance*esperance;
 
 toc
-    
-    
-    
-    
-    
-    
-
-
-
-
-
-
-
-
-
-
